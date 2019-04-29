@@ -10,6 +10,9 @@ const LaunchNavigator = (initialScreen)=>{
         },
         LoginScreen: {
             screen: AppScreens.LoginScreen
+        },
+        SampleScreen: {
+            screen: AppScreens.SampleScreen
         }
     };
 
@@ -21,5 +24,8 @@ const LaunchNavigator = (initialScreen)=>{
 }
 
 export const AppNavigator = ()=>{
-    return createAppContainer(LaunchNavigator(AppScreenNames.launch.IntroScreen));
+    let initScreen = AppScreenNames.launch.IntroScreen;
+    // let initScreen = AppScreenNames.launch.SampleScreen;
+
+    return createAppContainer(LaunchNavigator(initScreen));
 }
